@@ -196,6 +196,10 @@ if (savedExpenses) {
 }
 window.addEventListener("pageshow", function () {
     document.getElementById("date").value = "";
+    document.getElementById("date").addEventListener("change", function () {
+    document.getElementById("dateText").style.display =
+        this.value ? "none" : "block";
+}); 
 });
 
 
