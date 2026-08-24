@@ -194,6 +194,7 @@ if (savedExpenses) {
 
     displayExpenses();
 }
+document.getElementById("date").value = "";
 
 
 
