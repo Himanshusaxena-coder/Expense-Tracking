@@ -236,3 +236,26 @@ h3 {
         font-size: 12px;
     }
 }
+.date-box {
+    position: relative;
+    width: 100%;
+}
+
+.date-box input {
+    width: 100%;
+}
+
+#dateText {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #c9bddf;
+    font-size: 16px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#date.has-date + #dateText {
+    display: none;
+}
