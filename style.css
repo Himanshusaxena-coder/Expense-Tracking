@@ -256,9 +256,6 @@ h3 {
     z-index: 1;
 }
 
-#date.has-date + #dateText {
-    display: none;
-}
 .date-box {
     position: relative;
     width: 100%;
