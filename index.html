@@ -1,0 +1,36 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class= "Box">
+    <!-- Pura content -->
+    <h1>Expense Tracker</h1>
+
+    <input type="text" id="expenseInput" placeholder="Spend On ?">
+    <input type="number" id="amount" placeholder="How much ?">
+
+    <input type="date" id="date">
+    <button onclick="addExpense()">Add Expense</button>
+
+    <ul id="list"></ul>
+    <h2> Total: &#8377;<span id="Total">0</span></h2>
+    <button onclick="clearExpenses()">Clean All</button>
+
+
+    <h3> Range Total</h3> 
+    <p class="Hint"> Pick a start and end row Number</p>
+    <input type="Number" id="s" placeholder="Start Row (e.g. 1)">
+    <input type="Number" id="r" placeholder="End Row (e.g. 3)">
+    <button onclick="findtotal()">Calculate Range</button>
+    <div id="Result"></div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
