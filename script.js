@@ -198,7 +198,12 @@ function updateDateText() {
     const date = document.getElementById("date");
     const dateText = document.getElementById("dateText");
 
-    dateText.style.display = date.value ? "none" : "block";
+    if (date.value) {
+        const parts = date.value.split("-");
+        dateText.textContent = `${parts[2]}/${parts[1]}/${parts[0]}`;
+    } else {
+        dateText.textContent = "Date";
+    }
 }
 
 window.addEventListener("pageshow", function () {
@@ -207,9 +212,6 @@ window.addEventListener("pageshow", function () {
 });
 
 document.getElementById("date").addEventListener("change", updateDateText);
-
-
-
 
 
 
