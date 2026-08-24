@@ -194,13 +194,19 @@ if (savedExpenses) {
 
     displayExpenses();
 }
+function updateDateText() {
+    const date = document.getElementById("date");
+    const dateText = document.getElementById("dateText");
+
+    dateText.style.display = date.value ? "none" : "block";
+}
+
 window.addEventListener("pageshow", function () {
     document.getElementById("date").value = "";
-    document.getElementById("date").addEventListener("change", function () {
-    document.getElementById("dateText").style.display =
-        this.value ? "none" : "block";
-}); 
+    updateDateText();
 });
+
+document.getElementById("date").addEventListener("change", updateDateText);
 
 
 
